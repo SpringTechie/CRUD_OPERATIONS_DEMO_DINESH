@@ -30,4 +30,11 @@ public class EmployeeController {
       return employeeService.getEmployeeById(id);
     }
 
+    // TODO
+    // fetch all employees
+    // update employee name, if employee ecists update it else create it
+    // delete employye bases on id
+    // delete all employees
+    // find count all employee in DB.
+    //
 }
