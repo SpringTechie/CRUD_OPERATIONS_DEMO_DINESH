@@ -1,0 +1,45 @@
+Till Now if we want to use any project into our project. we need to add external jar files into our
+project under classpath.
+
+// What is the problem with above approach.
+For suppose if we want upgrade or downgrade  any jar file we need to remove the entire existing jar and
+update new jars.
+
+// Later maven introduced into java projects which played key role  for managing java projects through pom file
+where we add just dependency into project
+It is easy identify dependency version and upgrading or degrading dependency is easy.
+
+// Still we see issue with versions
+// To overcome this spring boot starter dependencies are introduced where we no need to worry about
+version
+spring boot pulls the latest version of any dependency based on parent project version.
+
+//  what is default server?
+// tomcat is the default server.
+// tomcat runs on 8080
+// how to change port ?
+// to change the port we need to add one property in properties file
+// server.port=9090
+
+// What if I want to change the server tomcat to jetty?
+// We need to exclude the tomcat dependency and add jetty dependency in pom file.
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+add jetty server:
+
+       <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jetty</artifactId>
+		</dependency>
+
+
+

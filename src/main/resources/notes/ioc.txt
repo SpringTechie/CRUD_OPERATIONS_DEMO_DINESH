@@ -1,0 +1,16 @@
+We have two types of IOC containers
+1.BeanFactory : Basic ioc container used in small applications.
+It is lazy factory:
+It create bean the when the object is requested or used.
+2.Application Context : Advance Ioc container which extends bean factory and has some extra additional
+features.
+It is eager factory:
+It creates all the beans at the time of application start.
+
+How to get bean from Application context?
+
+
+
+
+
+
